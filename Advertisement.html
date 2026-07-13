@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Cards</title>
+
+<style>
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 40px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 40px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    width: 220px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;         
+    margin: 15px;                
+    padding: 15px;               
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+  .image-wrap {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .card:hover .image-wrap img {
+    transform: scale(1.15);
+  }
+  .card::before {
+    content: "SALE";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #e63946;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 2;
+  }
+  .product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    color: #333333;
+  }
+  .price {
+    font-size: 14px;
+    color: rgba(240, 6, 6, 0.956);
+    margin-bottom: 12px;
+  }
+  .price .old-price {
+    text-decoration: line-through;
+    color:black;
+    margin-right: 6px;
+  }
+  .buy-btn {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: lightgreen;
+    color:black;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .buy-btn:hover {
+    background-color: lightgreen;
+  }
+
+</style>
+</head>
+<body>
+<h1>Our Products</h1>
+<div class="container">
+<div class="card">
+    <div class="image-wrap">
+      <img src="shoe.jpg" alt="Sneakers">
+    </div>
+    <div class="product-name">Sport Shoes</div>
+    <div class="price"><span class="old-price">1600</span>700</div>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <div class="image-wrap">
+      <img src="Smart Watch.jpg" alt="Watch">
+    </div>
+    <div class="product-name">Watch</div>
+    <div class="price"><span class="old-price">1200</span>890</div>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+  <div class="card">
+    <div class="image-wrap">
+      <img src="earbuds.jpg" alt="Headphones">
+    </div>
+    <div class="product-name">Earbuds</div>
+    <div class="price"><span class="old-price">800</span>590</div>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+  <div class="card">
+    <div class="image-wrap">
+      <img src="Smart phone.webp" alt="phone">
+    </div>
+    <div class="product-name">Smartphone</div>
+    <div class="price"><span class="old-price">500</span>250</div>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+  <div class="card">
+    <div class="image-wrap">
+      <img src="sunglasses.jpg" alt="Sunglasses">
+    </div>
+    <div class="product-name">Sunglasses</div>
+    <div class="price"><span class="old-price">1000</span>600</div>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+  <div class="card">
+    <div class="image-wrap">
+      <img src="perfume1.jpg" alt="Backpack">
+    </div>
+    <div class="product-name">Perfume</div>
+    <div class="price"><span class="old-price">250</span>120</div>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+</div>
+</body>
+</html>
